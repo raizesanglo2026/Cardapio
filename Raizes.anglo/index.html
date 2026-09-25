@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="web_standard" name="shell-type">
+    <title>Cardápio Raízes - Sabores da Bahia</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1"
+        rel="stylesheet">
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #feae2c;
+            border-radius: 10px;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#cb492f",
+                        "surface-variant": "#ffdbc7",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fff8f5",
+                        "inverse-primary": "#ffb4a4",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#0d512f",
+                        "on-background": "#301401",
+                        "on-tertiary-container": "#f6fff5",
+                        "outline-variant": "#e0bfb8",
+                        "primary-fixed-dim": "#ffb4a4",
+                        "surface-container": "#ffeadf",
+                        "secondary": "#835500",
+                        "surface": "#fff8f5",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-container": "#6b4500",
+                        "surface-container-high": "#ffe3d3",
+                        "on-surface-variant": "#59413c",
+                        "tertiary-container": "#43815a",
+                        "inverse-surface": "#4a2810",
+                        "primary": "#a93119",
+                        "surface-container-low": "#fff1ea",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#3e0500",
+                        "on-surface": "#301401",
+                        "secondary-fixed-dim": "#ffb955",
+                        "on-tertiary-fixed": "#00210f",
+                        "surface-tint": "#ac331b",
+                        "surface-container-highest": "#ffdbc7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#94d5a7",
+                        "outline": "#8c716b",
+                        "tertiary": "#296743",
+                        "primary-fixed": "#ffdad3",
+                        "on-secondary-fixed-variant": "#633f00",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffddb4",
+                        "on-primary-fixed-variant": "#8b1b05",
+                        "surface-dim": "#ffd1b5",
+                        "inverse-on-surface": "#ffede4",
+                        "on-secondary-fixed": "#291800",
+                        "on-secondary": "#ffffff",
+                        "background": "#fff8f5",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#aff2c2",
+                        "secondary-container": "#feae2c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-tablet": "2rem",
+                        "space-xs": "0.25rem",
+                        "space-xl": "2.5rem",
+                        "gutter-desktop": "2rem",
+                        "margin-desktop": "3rem",
+                        "gutter": "1rem",
+                        "space-sm": "0.5rem",
+                        "space-lg": "1.5rem",
+                        "margin": "1rem",
+                        "space-md": "1rem",
+                        "gutter-tablet": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-xl-mobile": ["Epilogue"],
+                        "headline-lg": ["Epilogue"],
+                        "headline-xl": ["Epilogue"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Epilogue"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "display-lg": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-lg": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "600" }],
+                        "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }</script>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased overflow-y-auto min-h-screen">
+    <header
+        class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,40,16,0.06)]">
+        <div
+            class="h-20 w-full max-w-[1280px] mx-auto px-margin-desktop flex items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-sm"><a class="flex items-center gap-2 group" href="#hero"><img
+                        alt="Raízes Sabores da Bahia - Logotipo Oficial"
+                        class="h-16 w-auto object-contain rounded-lg hover:scale-105 transition-transform duration-500 drop-shadow-sm"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhIf3IdSw1OkXB0pvOO1nqV61Az-P6AdjOKgnDDDgwHVTtD8aNhhenMeYJS00w5AfsAG-W0CpwBGIfLoms8wVf_En4BKje_ls3u1ZUmll8UougP8o_v0F6kdMCJ7OUJfVxB3pMVKf_8Ch_xIV00LzDWVHQHwSAzVE872_XEhe2djTC7ErszQlbYrzDDRbWvZd39XAhfVMplPTzVeCipSlz2CG-X0261qxls79MA5BzDpxs74LA_Lr_xBHjC4KgPzxWfGg">
+                    <div class="flex flex-col"><span
+                            class="font-headline-md text-headline-md text-[#c84022] font-black tracking-tight leading-tight">Raízes</span><span
+                            class="font-label-sm text-label-sm text-[#835500] uppercase tracking-wider font-bold">Sabores
+                            da Bahia</span></div>
+                </a></div>
+            <nav class="hidden lg:flex items-center gap-space-xs"
+                data-active-classes="bg-surface-container text-primary font-bold rounded-full"><a
+                    class="px-space-md py-space-xs font-label-lg text-label-lg rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    href="#cardapio" onclick="filterCategory('all')">Cardápio Completo</a><a
+                    class="px-space-md py-space-xs font-label-lg text-label-lg rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    href="#sec-espetinhos" onclick="filterCategory('espetinhos')">Espetinhos</a><a
+                    class="px-space-md py-space-xs font-label-lg text-label-lg rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    href="#sec-crepes" onclick="filterCategory('crepes')">Crepes</a><a
+                    class="px-space-md py-space-xs font-label-lg text-label-lg rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    href="#sec-escondidinhos" onclick="filterCategory('escondidinhos')">Escondidinhos</a><a
+                    class="px-space-md py-space-xs font-label-lg text-label-lg rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    href="#sec-doces" onclick="filterCategory('doces')">Doces &amp; Bebidas</a><a
+                    class="px-space-md py-space-xs font-label-lg text-label-lg rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    href="#sobre-nos">Sobre Nós</a><a
+                    class="px-space-md py-space-xs font-label-lg text-label-lg rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
+                    href="#contato">Contato</a></nav>
+            <div class="flex items-center gap-space-sm"><a
+                    class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#c84022]/40 bg-[#fff5ee] text-[#c84022] hover:bg-[#c84022] hover:text-white transition-all text-xs font-bold shadow-sm"
+                    href="https://instagram.com/raizes.anglo" target="_blank" rel="noopener noreferrer"><span
+                        class="material-symbols-outlined text-[16px]">photo_camera</span> <span
+                        class="">@raizes.anglo</span></a><a
+                    class="w-10 h-10 rounded-full bg-[#1b633a] text-white hover:bg-[#154f2e] transition-all flex items-center justify-center shadow-sm shrink-0"
+                    href="https://wa.me/5571992139376" target="_blank" rel="noopener noreferrer"
+                    aria-label="WhatsApp Raízes (71) 99213-9376"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path
+                            d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.87 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.46zm-8.46 17.91h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.92-9.86 9.92zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z">
+                        </path>
+                    </svg></a></div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+        <div class="flex flex-col w-full">
+            <!-- HERO SECTION -->
+            <section id="hero" class="relative w-full overflow-hidden bg-[#fff2e8] border-b-4 border-[#feae2c]">
+                <!-- Vibrantly styled Bahia Folk Graphics & Patterns -->
+                <div class="absolute inset-0 z-0 opacity-15 mix-blend-multiply pointer-events-none">
+                    <div class="w-full h-full bg-cover bg-center"
+                        style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC_48GeHn_0YVIJjhX72WzF_-rergOp08isp5OGQDG7cAsJ1XYdeBlkKH1jAJjGbcA5Gor6cmEI8TzWNQ8IxX-m11GzAECg_ZGcra13FapFzSZo6vCN08JhAur_Hq9ZSBX01UGXnsbbghC3eDw2fa_X2y1rxbncmqAUWLTEzXhc16_E62ginpRtuypSMzNalnQgwTJIMTQiJY6A31tHC_IvNXCxlzouZaU18U1KlLcQGG4s4IiqY5xJJw&quot;);">
+                    </div>
+                </div>
+                <!-- Sunlit Gradient Scrim with warm gold & terracotta tint -->
+                <div class="absolute inset-0 z-0 bg-gradient-to-r from-[#fff5ee] via-[#fff5ee]/95 to-[#ffe8d6]/80">
+                </div>
+                <!-- Folk Hibiscus / Wave Decorative SVG Accents -->
+                <div
+                    class="absolute right-0 top-0 translate-x-6 -translate-y-4 w-96 h-96 opacity-35 pointer-events-none text-[#c84022]">
+                    <svg class="w-full h-full fill-current" viewBox="0 0 240 240"><!-- Sol Poente dourado -->
+                        <circle cx="145" cy="90" fill="#feae2c" opacity="0.85" r="60"></circle>
+                        <!-- Igreja Colonial Barroca de Salvador -->
+                        <path
+                            d="M110 140 L110 100 L118 100 L118 85 Q122 80 125 78 L125 70 L123 70 L123 66 L125 66 L125 60 L127 60 L127 66 L129 66 L129 70 L127 70 L127 78 Q130 80 134 85 L134 100 L142 100 L142 140 Z"
+                            fill="#301401"></path>
+                        <rect fill="#301401" height="30" rx="2" width="12" x="100" y="110"></rect>
+                        <rect fill="#301401" height="30" rx="2" width="12" x="140" y="110"></rect>
+                        <path d="M104 105 Q106 95 106 95 L108 105 Z" fill="#301401"></path>
+                        <path d="M144 105 Q146 95 146 95 L148 105 Z" fill="#301401"></path>
+                        <!-- Coqueiro Baiano Tropical -->
+                        <path d="M185 140 Q183 105 178 85" fill="none" stroke="#301401" stroke-linecap="round"
+                            stroke-width="4"></path>
+                        <path d="M178 85 Q160 70 150 78 Q165 85 178 85" fill="#1b633a"></path>
+                        <path d="M178 85 Q195 68 210 75 Q195 85 178 85" fill="#1b633a"></path>
+                        <path d="M178 85 Q205 85 215 100 Q195 98 178 85" fill="#1b633a"></path>
+                        <path d="M178 85 Q160 88 145 102 Q162 96 178 85" fill="#1b633a"></path>
+                        <path d="M178 85 Q180 62 176 50 Q184 65 178 85" fill="#1b633a"></path>
+                        <!-- Ondas Azuis Fluidas -->
+                        <path d="M80 145 Q115 130 150 142 T220 138 L220 145 Q185 140 150 148 T80 152 Z" fill="#0e5b9e">
+                        </path>
+                        <path d="M95 153 Q130 140 165 150 T225 146 L225 152 Q190 148 165 156 T95 158 Z" fill="#0e5b9e">
+                        </path><!-- Flor de Hibisco Vibrante da Logo -->
+                        <g transform="translate(35, 120)">
+                            <path
+                                d="M40 30 C15 5 5 40 25 55 C-5 65 5 105 35 95 C45 125 85 120 85 90 C115 100 125 65 95 50 C115 20 80 5 60 30 Z"
+                                fill="#c84022"></path>
+                            <circle cx="60" cy="65" fill="#feae2c" r="10"></circle><!-- Pistilo do hibisco -->
+                            <path d="M60 65 Q78 40 86 35" fill="none" stroke="#835500" stroke-linecap="round"
+                                stroke-width="3"></path>
+                            <circle cx="88" cy="33" fill="#feae2c" r="3"></circle><!-- Folhas Verdes do Hibisco -->
+                            <path d="M15 35 C-5 25 0 5 20 15 C30 22 25 32 15 35 Z" fill="#1b633a"></path>
+                            <path d="M15 85 C-5 95 -5 115 15 110 C25 105 25 95 15 85 Z" fill="#1b633a"></path>
+                        </g>
+                    </svg>
+                </div>
+                <!-- Left Side Corner Tropical Flower Accent -->
+                <div class="absolute -left-10 bottom-0 w-64 h-64 opacity-25 pointer-events-none text-[#c84022]">
+                    <svg class="w-full h-full fill-current" viewBox="0 0 160 160">
+                        <path d="M40 80 C20 40 60 20 80 50 C95 70 85 90 40 80 Z" fill="#1b633a"></path>
+                        <path
+                            d="M70 70 C50 40 100 20 95 65 C120 50 140 90 105 95 C120 125 70 135 65 105 C35 125 15 85 55 80 Z"
+                            fill="#a93119"></path>
+                        <circle cx="75" cy="75" fill="#feae2c" r="12"></circle>
+                    </svg>
+                </div>
+                <div
+                    class="relative z-10 max-w-[1280px] mx-auto px-margin-desktop py-space-xl lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+                    <div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+                        <!-- Stamp / Heritage Badge with saturated brand colors -->
+                        <h1
+                            class="font-display-lg text-display-lg text-[#301401] tracking-tight font-extrabold leading-tight">
+                            Tradição, afeto e o <span
+                                class="text-[#c84022] underline decoration-[#feae2c] decoration-wavy decoration-4 underline-offset-8">melhor
+                                sabor</span> da Bahia.
+                        </h1>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[#c84022] text-xl">🌺</span>
+                            <p class="font-headline-md text-headline-md text-[#835500] italic font-bold">
+                                “O sabor da nossa terra, em cada mordida.”
+                            </p>
+                        </div>
+                        <p class="font-body-lg text-body-lg text-[#59413c] max-w-xl font-medium leading-relaxed">
+                            Receitas de família preparadas no fogo lento, espetinhos dourados na brasa, escondidinhos
+                            cremosos no forno a lenha e crepes leves com alma soteropolitana.
+                        </p>
+                        <!-- Feature Badges with Vivid Paleta de Cores -->
+                        <div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+                            <span
+                                class="px-space-md py-space-xs bg-white text-[#1b633a] border border-[#1b633a]/30 rounded-full text-label-md font-label-md flex items-center gap-1.5 shadow-sm font-semibold">
+                                <span class="material-symbols-outlined text-[#1b633a] text-[18px]">eco</span>
+                                Ingredientes frescos
+                            </span>
+                            <span
+                                class="px-space-md py-space-xs bg-white text-[#c84022] border border-[#c84022]/30 rounded-full text-label-md font-label-md flex items-center gap-1.5 shadow-sm font-semibold">
+                                <span
+                                    class="material-symbols-outlined text-[#c84022] text-[18px]">local_fire_department</span>
+                                Feito na brasa
+                            </span>
+                            <span
+                                class="px-space-md py-space-xs bg-white text-[#835500] border border-[#835500]/30 rounded-full text-label-md font-label-md flex items-center gap-1.5 shadow-sm font-semibold">
+                                <span class="material-symbols-outlined text-[#feae2c] text-[18px]"
+                                    style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span> Receita de
+                                família
+                            </span>
+                            <span
+                                class="px-space-md py-space-xs bg-[#0e5b9e] text-white rounded-full text-label-md font-label-md flex items-center gap-1.5 shadow-sm font-semibold">
+                                <span class="material-symbols-outlined text-white text-[18px]">waves</span> Sabor de
+                                Salvador
+                            </span>
+                        </div>
+                        <!-- Quick CTAs with saturated, vibrant brand colors -->
+                        <div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+                            <a class="px-space-xl py-space-md rounded-full bg-[#c84022] text-white font-label-lg text-label-lg shadow-lg hover:bg-[#a93119] transition-all flex items-center gap-2 transform hover:scale-105"
+                                href="#cardapio">
+                                <span class="material-symbols-outlined text-[20px]">restaurant_menu</span>
+                                <span class="font-bold">Ver Cardápio Completo</span>
+                            </a>
+                            <a class="px-space-lg py-space-md rounded-full bg-[#feae2c] text-[#301401] font-label-lg text-label-lg shadow-md hover:bg-[#e6910e] transition-all flex items-center gap-2 transform hover:scale-105 font-bold"
+                                href="https://wa.me/5571992139376?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Ra%C3%ADzes."
+                                rel="noopener noreferrer" target="_blank">
+                                <span class="material-symbols-outlined text-[20px] text-[#301401]">chat</span>
+                                <span class="">Pedir pelo WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hero Visual Card with Bahia Wave Ribbon and Floral Frame -->
+                    <div class="lg:col-span-5 relative">
+
+                    </div>
+                </div>
+                <!-- Onda Baiana & Floral Decorative Multi-color Wave Banner -->
+                <div class="w-full flex flex-col relative">
+                    <div class="w-full h-4 bg-gradient-to-r from-[#c84022] via-[#feae2c] via-[#1b633a] to-[#0e5b9e]">
+                    </div>
+                    <div
+                        class="w-full py-1.5 bg-[#ffe8d6] border-b-2 border-[#feae2c]/40 flex items-center justify-around overflow-hidden text-xs text-[#835500] font-bold shadow-inner">
+                        <span class="">🌺 Raízes</span><span class="">≈≈ ☀️ ≈≈</span><span class="">⛪
+                            Salvador</span><span class="">≈≈ 🌊 ≈≈</span><span class="">🌴 Dendê &amp; Afeto</span><span
+                            class="">≈≈ 🌺 ≈≈</span><span class="">☀️ Fogo de Chão</span><span class="">≈≈ 🌊
+                            ≈≈</span><span class="">🌺 Raízes</span><span class="">≈≈ ☀️ ≈≈</span><span
+                            class="hidden sm:inline">🌴 Tradição Baiana</span>
+                    </div><svg class="w-full h-6 text-[#0e5b9e] fill-current opacity-25 -mt-1 pointer-events-none"
+                        preserveAspectRatio="none" viewBox="0 0 1200 40">
+                        <path d="M0,20 Q150,0 300,20 T600,20 T900,20 T1200,20 L1200,40 L0,40 Z"></path>
+                    </svg>
+                </div>
+            </section>
+            <!-- MAIN ORDERING EXPERIENCE (MENU + LIVE CART SIDEBAR) -->
+            <div class="w-full max-w-[1280px] mx-auto px-margin-desktop py-space-xl" id="cardapio">
+                <!-- CATEGORY FILTER BAR -->
+                <div class="sticky top-20 z-40 bg-surface/95 backdrop-blur-md py-space-sm mb-space-lg">
+
+                </div>
+                <!-- GRID WRAPPER: MENU (COL 8) + CART SIDEBAR (COL 4) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+                    <!-- MENU SECTIONS COLUMN -->
+                    <div class="lg:col-span-8 flex flex-col gap-space-xl">
+                        <!-- ================= 1. ESPETINHOS NA BRASA ================= -->
+                        <section id="sec-espetinhos" class="flex flex-col gap-space-md scroll-mt-28"
+                            data-category-section="espetinhos">
+                            <div class="flex flex-col">
+                                <div class="flex items-center justify-between border-b-2 border-[#feae2c] pb-2">
+                                    <div class="flex flex-col">
+                                        <div
+                                            class="flex items-center gap-space-xs text-[#c84022] font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                                            <span class="material-symbols-outlined text-[18px]">outdoor_grill</span>
+                                            <span class="">Fogo de Chão &amp; Carvão Vegetal • Tradição da Bahia</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <h2 class="font-headline-xl text-headline-xl text-[#301401] font-extrabold">
+                                                Espetinhos na Brasa</h2>
+                                            <span class="text-2xl text-[#c84022]">🌺</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="hidden sm:flex items-center gap-2 bg-[#ffeedb] px-3 py-1 rounded-full border border-[#feae2c]">
+                                        <span class="text-[#c84022] font-bold text-xs uppercase tracking-wider">🔥 Brasa
+                                            Viva</span>
+                                    </div>
+                                </div>
+                                <!-- Highlight banner with warm golden background -->
+                                <div
+                                    class="mt-space-xs p-space-sm bg-[#ffeadf] border-l-4 border-[#c84022] rounded font-body-sm text-body-sm text-[#59413c] flex items-center gap-space-xs shadow-sm">
+                                    <span class="material-symbols-outlined text-[#c84022] text-[22px]">recommend</span>
+                                    <span class=""><strong class="text-[#301401]">Acompanhamento Incluso:</strong>
+                                        Servidos com farofa crocante da casa e vinagrete especial. Finalizado com toque
+                                        de orégano e melaço aromático de cana.</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+                                <!-- Item 1: Carne -->
+                                <div
+                                    class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+                                    <div class="flex flex-col gap-space-xs">
+                                        <div
+                                            class="h-44 w-full rounded overflow-hidden relative mb-space-xs bg-surface-container">
+                                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                alt="Espetinho suculento de alcatra bovina grelhado na brasa"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwitKRXhtVFWtohxyFt6EDx6gKbWbkUflih0ZdeF48pXSaq1VUY0y1eor1wkksBbm4MszdKBwotlQK4wQtHl1G0fIjgW3IioUWMw3rK_xEN7xyjxN3bikx28JSpNEWHExD-rHXlyM5u1l8NEuvfLXhdEQdyEfs9d-1q_0o_jnCQtVkGqT4kC7wAu4zyAhpwJSD5j2yoPa_ohWlWpEsF079wutfZLFAoXbTQfDO-kaM7vZbJaNRoM36nA">
+                                            <span
+                                                class="absolute top-2 right-2 bg-primary text-on-primary text-label-sm font-label-sm px-space-xs py-0.5 rounded-full">Mais
+                                                Pedido</span>
+                                        </div>
+                                        <div class="flex items-start justify-between gap-space-xs">
+                                            <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Espetinho de Carne</h3>
+                                            <span class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                12,00</span>
+                                        </div>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                            Cubos nobres de alcatra macia grelhados no ponto certo na brasa viva,
+                                            selados com suculência incomparável.
+                                        </p>
+                                        <div class="flex items-center gap-1 text-label-sm text-secondary pt-1">
+                                            <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                            Farofa crocante + vinagrete
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-md flex items-center justify-between">
+                                        <span class="font-label-sm text-label-sm text-outline font-medium">Porção
+                                            individual</span>
+                                        <button
+                                            class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm"
+                                            onclick="addToCart('Espetinho de Carne', 12.00)">
+                                            <span class="material-symbols-outlined text-[18px]">add</span> Adicionar
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Item 2: Frango -->
+                                <div
+                                    class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+                                    <div class="flex flex-col gap-space-xs">
+                                        <div
+                                            class="h-44 w-full rounded overflow-hidden relative mb-space-xs bg-surface-container">
+                                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                alt="Espetinho de peito de frango marinado com ervas"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0UMHPu9qLXmrvczjhCFS5W1MJSMGTpsX6Pn1u6T0FQAWh9r1Ls4fPqOEdWkd7_wfM-IZwXp8dXwReudf3eP_-kIBzVStw8YGLHBsNrMCmpzW8PluhrcrqhZXi9cUrTVVRWk_myCE3d0WVaIOhV11SAE1c9GQZcBO-CnOX0wXUgyg1uFK_KheOrdz45pNjtica1rGnxiMaB6XdEsq7hyMq-8mMJjjsrAk4071tljaU3q6HAjE7qkxDwA">
+                                        </div>
+                                        <div class="flex items-start justify-between gap-space-xs">
+                                            <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Espetinho de Frango</h3>
+                                            <span class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                10,00</span>
+                                        </div>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                            Peito de frango macio marinado em tempero de ervas finas, limão e
+                                            especiarias baianas, dourado e tenro.
+                                        </p>
+                                        <div class="flex items-center gap-1 text-label-sm text-secondary pt-1">
+                                            <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                            Farofa crocante + vinagrete
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-md flex items-center justify-between">
+                                        <span class="font-label-sm text-label-sm text-outline font-medium">Porção
+                                            individual</span>
+                                        <button
+                                            class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm"
+                                            onclick="addToCart('Espetinho de Frango', 10.00)">
+                                            <span class="material-symbols-outlined text-[18px]">add</span> Adicionar
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Item 3: Linguiça -->
+                                <div
+                                    class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+                                    <div class="flex flex-col gap-space-xs">
+                                        <div
+                                            class="h-44 w-full rounded overflow-hidden relative mb-space-xs bg-surface-container">
+                                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                alt="Espetinho de linguiça artesanal toscana"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD90g6UmBnvpIld2c9RqIjdCT4tE7maTfw32WiHi7Ubz-tVAOLhJY3Ck3rBC6AGbhODGvU_dIy5BeoYD4SfRFqPxEzUQgPqF6WuE2XASfcFGjnQIKdPmFJMwRs5vLWNmcXBWapZYVW1AzAyZnxqNgQnff2ZGMnsj5Rgqph0BKfJcDTFzdAOIk3ADwUh0VUTz2XSLDQA71cBxd59_e2HqS_Hh0H0AjwdrPxuCUzgietfKwApiMMLKXswhw">
+                                        </div>
+                                        <div class="flex items-start justify-between gap-space-xs">
+                                            <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Espetinho de Linguiça</h3>
+                                            <span class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                8,00</span>
+                                        </div>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                            Linguiça artesanal suculenta e levemente defumada, com casquinha crocante e
+                                            sabor marcante.
+                                        </p>
+                                        <div class="flex items-center gap-1 text-label-sm text-secondary pt-1">
+                                            <span class="material-symbols-outlined text-[16px]">check_circle</span>
+                                            Farofa crocante + vinagrete
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-md flex items-center justify-between">
+                                        <span class="font-label-sm text-label-sm text-outline font-medium">Super
+                                            Econômico</span>
+                                        <button
+                                            class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm"
+                                            onclick="addToCart('Espetinho de Linguiça', 8.00)">
+                                            <span class="material-symbols-outlined text-[18px]">add</span> Adicionar
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Item 4: Queijo Coalho -->
+                                <div
+                                    class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+                                    <div class="flex flex-col gap-space-xs">
+                                        <div
+                                            class="h-44 w-full rounded overflow-hidden relative mb-space-xs bg-surface-container">
+                                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                alt="Espeto de queijo de coalho grelhado"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm-MUURol08uMCLweBoOI10E8K_DYPXlOZiBnNy8fw3OGJUdE--FlJGaYzgTN5EIzfgND-HAvHMqFam3uLrBmjNwkYfUhD3KJfp_8TlvuRzZhNcxHsnVHdhTnvPwvSgUoCwws42w089V9XKWbOKUYqjn0CdH0zoIVpxoLpQhcDN6lIKjiNopNC5HFeDbVN9XwbQIbyPwnlLvfkhOqAZzHV-8cB_9Cm6WFulB2qPcsB7LcnzE9AhUL_-w">
+                                            <span
+                                                class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container text-label-sm font-label-sm px-space-xs py-0.5 rounded-full font-bold">Queridinho</span>
+                                        </div>
+                                        <div class="flex items-start justify-between gap-space-xs">
+                                            <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Queijo Coalho Grelhado</h3>
+                                            <span class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                10,00</span>
+                                        </div>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                            Queijo de coalho autêntico, tostadinho e crocante por fora, puxa-puxa macio
+                                            e derretido por dentro.
+                                        </p>
+                                        <div class="flex items-center gap-1 text-label-sm text-secondary pt-1">
+                                            <span class="material-symbols-outlined text-[16px]">check_circle</span> Com
+                                            melaço aromático e orégano
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-md flex items-center justify-between">
+                                        <span
+                                            class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-[16px]">eco</span> Vegetariano
+                                        </span>
+                                        <button
+                                            class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm"
+                                            onclick="addToCart('Queijo Coalho Grelhado', 10.00)">
+                                            <span class="material-symbols-outlined text-[18px]">add</span> Adicionar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- ================= 2. CREPES ARTESANAIS ================= -->
+                        <section id="sec-crepes" class="flex flex-col gap-space-md scroll-mt-28"
+                            data-category-section="crepes">
+                            <div class="flex flex-col">
+                                <div class="flex items-center justify-between border-b-2 border-[#feae2c] pb-2">
+                                    <div class="flex flex-col">
+                                        <div
+                                            class="flex items-center gap-space-xs text-[#835500] font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                                            <span class="material-symbols-outlined text-[18px]">bakery_dining</span>
+                                            <span class="">Massa Leve &amp; Feita na Hora</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <h2 class="font-headline-xl text-headline-xl text-[#301401] font-extrabold">
+                                                Crepes Artesanais</h2>
+                                            <span class="text-2xl text-[#c84022]">🌺</span>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-[#59413c]">
+                                            Massa fininha e dourada à base de ovos frescos, farinha de primeira e toque
+                                            especial de sal.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Badge Especial Milho with saturated sunshine yellow -->
+                                <div
+                                    class="mt-space-xs inline-flex items-center gap-2 p-space-sm bg-[#feae2c]/20 border border-[#feae2c] text-[#835500] rounded-lg shadow-sm">
+                                    <span class="text-xl">🌽</span>
+                                    <span class="font-label-md text-label-md font-bold">Adicional Especial: Pote de
+                                        milho fresco na manteiga de garrafa para enriquecer seu crepe por +R$
+                                        1,00!</span>
+                                </div>
+                            </div>
+                            <!-- SALGADOS SUBSECTION -->
+                            <div class="flex flex-col gap-space-sm">
+                                <div class="flex items-center justify-between">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[20px]">lunch_dining</span>
+                                        Crepes Salgados
+                                    </h3>
+                                    <span class="font-label-sm text-label-sm text-outline">Acompanha saladinha de
+                                        cenoura ralada, alface e tomate fresco</span>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter">
+                                    <!-- Crepe 1: Frango c/ Requeijão -->
+                                    <div
+                                        class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between">
+                                        <div class="flex flex-col gap-space-xs">
+                                            <span class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                13,90</span>
+                                            <h4 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Frango com Requeijão Cremoso</h4>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                                Peito de frango cozido e desfiado no azeite e ervas, coberto com
+                                                requeijão cremoso da terra e orégano.
+                                            </p>
+                                        </div>
+                                        <div class="pt-space-md">
+                                            <button
+                                                class="w-full py-space-xs rounded-full bg-surface-container text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-1"
+                                                onclick="addToCart('Crepe Frango c/ Requeijão', 13.90)">
+                                                <span class="material-symbols-outlined text-[18px]">add</span> Pedir
+                                                Crepe
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Crepe 2: Carne Seca com Banana da Terra -->
+                                    <div
+                                        class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between">
+                                        <div class="flex flex-col gap-space-xs">
+                                            <div class="flex items-center justify-between">
+                                                <span
+                                                    class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                    14,90</span>
+                                                <span
+                                                    class="px-space-xs py-0.5 bg-surface-variant text-primary font-label-sm text-label-sm rounded-full">Sabor
+                                                    Raízes</span>
+                                            </div>
+                                            <h4 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Carne Seca com Banana da Terra</h4>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                                Clássica combinação baiana: carne seca desfiada refogada na manteiga de
+                                                garrafa e rodelas doces de banana da terra.
+                                            </p>
+                                        </div>
+                                        <div class="pt-space-md">
+                                            <button
+                                                class="w-full py-space-xs rounded-full bg-surface-container text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-1"
+                                                onclick="addToCart('Crepe Carne Seca com Banana', 14.90)">
+                                                <span class="material-symbols-outlined text-[18px]">add</span> Pedir
+                                                Crepe
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Crepe 3: Queijo e Presunto -->
+                                    <div
+                                        class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between">
+                                        <div class="flex flex-col gap-space-xs">
+                                            <span class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                11,90</span>
+                                            <h4 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Queijo &amp; Presunto Tradicional</h4>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                                Muçarela bem derretida, presunto fatiado fininho, rodelas de tomate e
+                                                orégano fresco aromático.
+                                            </p>
+                                        </div>
+                                        <div class="pt-space-md">
+                                            <button
+                                                class="w-full py-space-xs rounded-full bg-surface-container text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-1"
+                                                onclick="addToCart('Crepe Queijo e Presunto', 11.90)">
+                                                <span class="material-symbols-outlined text-[18px]">add</span> Pedir
+                                                Crepe
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- DOCES SUBSECTION -->
+                            <div class="mt-space-sm bg-surface-container-high/40 p-space-md rounded-lg">
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-sm">
+                                    <div>
+                                        <h3
+                                            class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-secondary text-[20px]">icecream</span>
+                                            Crepe Doce Especial
+                                        </h3>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">Acompanhado de
+                                            farta calda quente de chocolate artesanal</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-surface-container-lowest rounded-lg p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+                                    <div class="flex flex-col gap-1">
+                                        <div class="flex items-center gap-space-sm">
+                                            <h4 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Romeu e Julieta Baiano</h4>
+                                            <span class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                11,90</span>
+                                        </div>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                            Queijo minas/coalho cremoso derretido combinado à goiabada cascão artesanal
+                                            derretida com calda quente de chocolate.
+                                        </p>
+                                    </div>
+                                    <button
+                                        class="px-space-lg py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors whitespace-nowrap shadow-sm"
+                                        onclick="addToCart('Crepe Doce Romeu e Julieta', 11.90)">
+                                        + Adicionar ao Pedido
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- ================= 3. ESCONDIDINHOS DA CASA ================= -->
+                        <section id="sec-escondidinhos" class="flex flex-col gap-space-md scroll-mt-28"
+                            data-category-section="escondidinhos">
+                            <div class="flex flex-col">
+                                <div class="flex items-center justify-between border-b-2 border-[#1b633a] pb-2">
+                                    <div class="flex flex-col">
+                                        <div
+                                            class="flex items-center gap-space-xs text-[#1b633a] font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                                            <span class="material-symbols-outlined text-[18px]">soup_kitchen</span>
+                                            <span class="">Receita Raiz • Forno a Lenha • Azeite de Dendê Puro</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <h2 class="font-headline-xl text-headline-xl text-[#301401] font-extrabold">
+                                                Escondidinhos Cremosos</h2>
+                                            <span class="text-2xl text-[#c84022]">🌺</span>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-[#59413c]">
+                                            Purê aveludado e autêntico de aipim feito com queijo derretido, manteiga de
+                                            garrafa pura e leite fresco da fazenda, gratinado sob crosta dourada de
+                                            parmesão.
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="hidden sm:flex items-center gap-1 text-[#1b633a] font-bold text-sm bg-[#e8f5ed] px-3 py-1.5 rounded-full border border-[#1b633a]/30">
+                                        <span class="">🌿 Ervas &amp; Raízes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+                                <!-- Escondidinho Camarão -->
+                                <div
+                                    class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                                    <div class="h-48 w-full relative">
+                                        <img class="w-full h-full object-cover"
+                                            alt="Escondidinho de camarão baiano em travessa de cerâmica"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGCxAAYg8cgZulSbeC4gjTQKls1_SK18umVXrnKUWNEHLRCTsPN4j7G2L7JwlXa1BuV8UeMZRnflMMWn7E5jDzknUGrItVUfvazu0rSikdowJ9UxGNrpAFahi_tabmod3JsvtuEZu4BfR1OqbpS9TJo7j0kZ283tGkEOhf8DkLEU-fpNm4NMLnEVnjHDg_7ZAqefdJp0xI5Rv4RRqETfshEt9QvF-35KAX4pBfXXLNzcJ08NAATEUdAw">
+                                        <span
+                                            class="absolute top-3 left-3 bg-tertiary text-on-tertiary px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Especialidade
+                                            Litorânea</span>
+                                    </div>
+                                    <div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+                                        <div>
+                                            <div class="flex items-baseline justify-between mb-space-xs">
+                                                <h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+                                                    Camarão Baiano</h3>
+                                                <span
+                                                    class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                    19,90</span>
+                                            </div>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                                Camarões frescos selecionados salteados com leve toque de azeite de
+                                                dendê, leite de coco artesanal e molho de tomates frescos sob purê
+                                                aveludado de aipim.
+                                            </p>
+                                        </div>
+                                        <div class="pt-space-md">
+                                            <button
+                                                class="w-full py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-1"
+                                                onclick="addToCart('Escondidinho de Camarão Baiano', 19.90)">
+                                                <span class="material-symbols-outlined text-[18px]">add</span> Adicionar
+                                                Escondidinho
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Escondidinho Carne de Sol -->
+                                <div
+                                    class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                                    <div class="h-48 w-full relative">
+                                        <img class="w-full h-full object-cover"
+                                            alt="Escondidinho de Carne de Sol Desfiada"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuXrCh9G02PVt5wJCty78aY9a9XTfDRa_QNF8pYPjmetqOg94glTYriF3y1B4LjQes7iDgKKxg9QqgS-yO3zPqKZa8nyMZ5lVj9NDT_pU_JmFKVFl8R0O_XSNDLJ0lxIdnMYWkYDIMZzhbB1e6HI-o1qFDUf9g8DQpe2M3Of4Eich7LT4UyqRh811ksJgQVqHkzFp3fLgI1eQzwIYDcAsTNvMCIJmhEeDLUiRmARlDWFMqRrJZXyePBA">
+                                        <span
+                                            class="absolute top-3 left-3 bg-primary text-on-primary px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Tradição
+                                            do Sertão</span>
+                                    </div>
+                                    <div class="p-space-md flex flex-col gap-space-xs flex-1 justify-between">
+                                        <div>
+                                            <div class="flex items-baseline justify-between mb-space-xs">
+                                                <h3 class="font-headline-md text-headline-md text-on-surface font-bold">
+                                                    Carne de Sol Desfiada</h3>
+                                                <span
+                                                    class="font-headline-md text-headline-md text-primary font-bold">R$
+                                                    18,90</span>
+                                            </div>
+                                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                                Carne de sol cozida lentamente até desmanchar, refogada com cebola roxa
+                                                marinada e nata fresca, envolta em farto purê de aipim da casa.
+                                            </p>
+                                        </div>
+                                        <div class="pt-space-md">
+                                            <button
+                                                class="w-full py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-1"
+                                                onclick="addToCart('Escondidinho Carne de Sol', 18.90)">
+                                                <span class="material-symbols-outlined text-[18px]">add</span> Adicionar
+                                                Escondidinho
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- ================= 4. DOCES & SOBREMESAS ================= -->
+                        <section id="sec-doces" class="flex flex-col gap-space-md scroll-mt-28"
+                            data-category-section="doces">
+                            <div class="flex flex-col">
+                                <div class="flex items-center justify-between border-b-2 border-[#feae2c] pb-2">
+                                    <div class="flex flex-col">
+                                        <div
+                                            class="flex items-center gap-space-xs text-[#835500] font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                                            <span class="material-symbols-outlined text-[18px]">cake</span>
+                                            <span class="">Dengo, Açúcar &amp; Nostalgia de Salvador</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <h2 class="font-headline-xl text-headline-xl text-[#301401] font-extrabold">
+                                                Doces &amp; Sobremesas Afetivas</h2>
+                                            <span class="text-2xl text-[#c84022]">🌺</span>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-[#59413c]">
+                                            Sobremesas feitas com ingredientes de verdade para fechar a refeição com
+                                            sorriso no rosto.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+                                <!-- Açaí Especial Raízes -->
+                                <div class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group border border-[#feae2c]/30 hover:shadow-md transition-shadow"
+                                    id="card-acai-raizes">
+                                    <div class="flex flex-col gap-space-xs">
+                                        <div
+                                            class="h-44 w-full rounded overflow-hidden relative mb-space-xs bg-surface-container">
+                                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                alt="Tigela generosa de açaí cremoso"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVAKiM2SgAHgDKzIgYfLyZh86-z66ENN8NMk2fuw_1gUEtHCetfJeLj9O-q9tqqIoC8rI0stmthqIemtOEUNscK22G9pRGQd7t2hkRu_rtm49OHhoHhq9RP6LuCFHmjvb5N-hM6v3HlA50_tb9TcHf3rRh-JceKTihPkTXz5qWiKDUBcluKGYlanCNwNPLwalWgsl8QInie7wije6k0KOhqMpGcWHEsxuY1Bb10WLd6tJP7l01tk2crg"><span
+                                                class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container text-label-sm font-label-sm px-space-xs py-0.5 rounded-full font-bold shadow-sm">Caprichado</span>
+                                        </div>
+                                        <div class="flex items-baseline justify-between">
+                                            <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Açaí Especial Raízes</h3><span
+                                                class="font-headline-md text-headline-md text-[#c84022] font-bold text-2xl"
+                                                id="acai-price-display">R$ 7,90</span>
+                                        </div>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">Tigela com Leite
+                                            Ninho, Leite Condensado, M&amp;M's crocantes, granola artesanal e banana
+                                            fatiada.</p>
+                                        <div class="flex flex-col gap-1.5 pt-space-xs"><span
+                                                class="font-label-sm text-label-sm text-[#835500] font-bold uppercase tracking-wider flex items-center gap-1"><span
+                                                    class="material-symbols-outlined text-[16px]">straighten</span>
+                                                Escolha o tamanho:</span>
+                                            <div
+                                                class="grid grid-cols-2 gap-1.5 bg-[#ffeadf] p-1 rounded-full border border-[#feae2c]/40">
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-bold transition-all shadow-sm flex items-center justify-center gap-1 bg-[#c84022] text-white"
+                                                    id="btn-acai-200" onclick="selectAcaiSize('200ml', 7.90)"
+                                                    type="button"><span class="">200 ml</span></button><button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-[#835500] hover:bg-white/70"
+                                                    id="btn-acai-500" onclick="selectAcaiSize('500ml', 15.90)"
+                                                    type="button"><span class="">500 ml</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-md"><button
+                                            class="w-full py-space-xs rounded-full bg-[#c84022] text-white font-label-md text-label-md hover:bg-[#a93119] transition-all flex items-center justify-center gap-1 shadow-sm font-bold"
+                                            id="btn-add-acai" onclick="addCurrentAcaiToCart()"><span
+                                                class="material-symbols-outlined text-[18px]">add</span> <span
+                                                id="acai-btn-text" class="">Adicionar 200ml (R$ 7,90)</span></button>
+                                    </div>
+                                </div>
+                                <!-- Sorvete Artesanal Baiano -->
+                                <div
+                                    class="bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col justify-between group border border-[#feae2c]/30 hover:shadow-md transition-shadow">
+                                    <div class="flex flex-col gap-space-xs">
+                                        <div
+                                            class="h-44 w-full rounded overflow-hidden relative mb-space-xs bg-surface-container">
+                                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                alt="Cremosinho Gourmet"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh07aSOeqEL2tFAmgKmsgnmqBqj_PBHWwLlHZGQ-2J4sGvchOw_X8GeMFTr5bi4R9BuTcOjrh_whdh31kxgB_bfPM0Wx_fdSGT3L69TOyORr2zQ2JzLT_LyVEaQkNa4ToWYBG2D9alLtcDD6DvUfzy9XkcEDtlVesZHsbqYGPY1Xt1He0HoCKSG4gTs0MLxHe7kgJ3MKkrGqaFkb4DB1_DUyTyNI5cWUh6gIrAR40Rd8cYS_yuhMdkaQ">
+                                        </div>
+                                        <div class="flex items-baseline justify-between">
+                                            <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+                                                Cremosinho Artesanal</h3><span
+                                                class="font-headline-md text-headline-md text-primary font-bold text-2xl">R$
+                                                2,50</span>
+                                        </div>
+                                        <p class="font-body-sm text-body-sm text-on-surface-variant">Sacolé cremoso
+                                            gourmet artesanal feito com frutas frescas da Bahia e leite condensado.
+                                            Sabores: Maracujá, Coco, Ninho com Nutella.</p>
+                                    </div>
+                                    <div class="pt-space-md"><button
+                                            class="w-full py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-1 shadow-sm font-bold"
+                                            onclick="addToCart('Cremosinho Artesanal', 6.00)"><span
+                                                class="material-symbols-outlined text-[18px]">add</span> + Adicionar ao
+                                            Pedido</button></div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- ================= 5. BEBIDAS REFRESCANTES ================= -->
+                        <section id="sec-bebidas" class="flex flex-col gap-space-md scroll-mt-28"
+                            data-category-section="bebidas">
+                            <div class="flex flex-col">
+                                <div class="flex items-center justify-between border-b-2 border-[#0e5b9e] pb-2">
+                                    <div class="flex flex-col">
+                                        <div
+                                            class="flex items-center gap-space-xs text-[#0e5b9e] font-label-sm text-label-sm uppercase tracking-wider font-bold">
+                                            <span class="material-symbols-outlined text-[18px]">waves</span>
+                                            <span class="">Gelo &amp; Frutas Tropicais • O Azul do Mar da Bahia</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <h2 class="font-headline-xl text-headline-xl text-[#301401] font-extrabold">
+                                                Bebidas Refrescantes</h2>
+                                            <span class="text-2xl text-[#c84022]">🌺</span>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-[#59413c]">
+                                            Para matar a sede com a temperatura e o frescor do litoral da Bahia.
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="hidden sm:flex items-center gap-1 text-[#0e5b9e] font-bold text-sm bg-[#e7f1f9] px-3 py-1.5 rounded-full border border-[#0e5b9e]/30">
+                                        <span class="">🌊 Refresque-se</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+                                <!-- Bebida 1: Água de Coco Verde -->
+                                <div class="bg-white rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-[#ffdbc7] min-h-[360px] group"
+                                    id="card-bebida-coco">
+                                    <div class="flex flex-col gap-space-sm">
+                                        <div class="flex items-center justify-between">
+                                            <div
+                                                class="w-16 h-16 rounded-2xl bg-[#1b633a]/10 text-[#1b633a] flex items-center justify-center shadow-inner">
+                                                <span class="material-symbols-outlined text-[32px]">nutrition</span>
+                                            </div>
+                                            <span
+                                                class="px-space-md py-1 bg-[#e8f5ed] text-[#1b633a] font-label-md text-label-md rounded-full font-bold border border-[#1b633a]/20 shadow-sm">100%
+                                                Natural</span>
+                                        </div>
+                                        <div class="mt-space-xs flex items-baseline justify-between gap-2">
+                                            <h3
+                                                class="font-headline-md text-2xl text-[#301401] font-black leading-tight">
+                                                Água de Coco</h3>
+                                            <span
+                                                class="font-headline-xl text-2xl text-[#c84022] font-black whitespace-nowrap"
+                                                id="coco-price-display">R$ 4,90</span>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-[#59413c] leading-relaxed">
+                                            Direto do coco verde natural da Bahia, bem geladinha, puríssima e super
+                                            hidratante para acompanhar qualquer prato.
+                                        </p>
+                                        <div class="flex flex-col gap-1.5 pt-space-xs">
+                                            <span
+                                                class="font-label-sm text-label-sm text-[#835500] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-[18px]">straighten</span>
+                                                Escolha o tamanho:
+                                            </span>
+                                            <div
+                                                class="grid grid-cols-2 gap-2 bg-[#ffeadf] p-1.5 rounded-full border border-[#feae2c]/30">
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-bold transition-all shadow-sm flex items-center justify-center gap-1 bg-[#c84022] text-white"
+                                                    id="btn-coco-200"
+                                                    onclick="selectDrinkSize('coco', 'Água de Coco', '200ml', 4.90)"
+                                                    type="button">
+                                                    <span class="">200 ml</span>
+                                                </button>
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-[#835500] hover:bg-white/70"
+                                                    id="btn-coco-500"
+                                                    onclick="selectDrinkSize('coco', 'Água de Coco', '500ml', 8.25)"
+                                                    type="button">
+                                                    <span class="">500 ml</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-lg mt-auto">
+                                        <button
+                                            class="w-full py-space-sm rounded-full bg-[#c84022] text-white font-label-md text-label-md hover:bg-[#a93119] transition-all flex items-center justify-center gap-2 shadow-sm font-bold"
+                                            id="btn-add-coco" onclick="addDrinkToCart('coco')">
+                                            <span class="material-symbols-outlined text-[20px]">add</span>
+                                            <span id="coco-btn-text" class="">Adicionar 200ml (R$ 4,90)</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Bebida 2: Limonada Suíça -->
+                                <div class="bg-white rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-[#ffdbc7] min-h-[360px] group"
+                                    id="card-bebida-limonada">
+                                    <div class="flex flex-col gap-space-sm">
+                                        <div class="flex items-center justify-between">
+                                            <div
+                                                class="w-16 h-16 rounded-2xl bg-[#feae2c]/20 text-[#835500] flex items-center justify-center shadow-inner">
+                                                <span class="material-symbols-outlined text-[32px]">local_cafe</span>
+                                            </div>
+                                            <span
+                                                class="px-space-md py-1 bg-[#ffeedb] text-[#835500] font-label-md text-label-md rounded-full font-bold border border-[#feae2c]/30 shadow-sm">Cremosa</span>
+                                        </div>
+                                        <div class="mt-space-xs flex items-baseline justify-between gap-2">
+                                            <h3
+                                                class="font-headline-md text-2xl text-[#301401] font-black leading-tight">
+                                                Limonada Suíça</h3>
+                                            <span
+                                                class="font-headline-xl text-2xl text-[#c84022] font-black whitespace-nowrap"
+                                                id="limonada-price-display">R$ 5,25</span>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-[#59413c] leading-relaxed">
+                                            Batida na hora com limão tahiti fresco, pedras de gelo e toque aveludado e
+                                            suave de leite condensado.
+                                        </p>
+                                        <div class="flex flex-col gap-1.5 pt-space-xs">
+                                            <span
+                                                class="font-label-sm text-label-sm text-[#835500] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-[18px]">straighten</span>
+                                                Escolha o tamanho:
+                                            </span>
+                                            <div
+                                                class="grid grid-cols-2 gap-2 bg-[#ffeadf] p-1.5 rounded-full border border-[#feae2c]/30">
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-bold transition-all shadow-sm flex items-center justify-center gap-1 bg-[#c84022] text-white"
+                                                    id="btn-limonada-200"
+                                                    onclick="selectDrinkSize('limonada', 'Limonada Suíça', '200ml', 5.25)"
+                                                    type="button">
+                                                    <span class="">200 ml</span>
+                                                </button>
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-[#835500] hover:bg-white/70"
+                                                    id="btn-limonada-400"
+                                                    onclick="selectDrinkSize('limonada', 'Limonada Suíça', '400ml', 7.50)"
+                                                    type="button">
+                                                    <span class="">400 ml</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-lg mt-auto">
+                                        <button
+                                            class="w-full py-space-sm rounded-full bg-[#c84022] text-white font-label-md text-label-md hover:bg-[#a93119] transition-all flex items-center justify-center gap-2 shadow-sm font-bold"
+                                            id="btn-add-limonada" onclick="addDrinkToCart('limonada')">
+                                            <span class="material-symbols-outlined text-[20px]">add</span>
+                                            <span id="limonada-btn-text" class="">Adicionar 200ml (R$ 5,25)</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Bebida 3: Soda Italiana -->
+                                <div class="bg-white rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-[#ffdbc7] min-h-[360px] group"
+                                    id="card-bebida-soda">
+                                    <div class="flex flex-col gap-space-sm">
+                                        <div class="flex items-center justify-between">
+                                            <div
+                                                class="w-16 h-16 rounded-2xl bg-[#0e5b9e]/10 text-[#0e5b9e] flex items-center justify-center shadow-inner">
+                                                <span class="material-symbols-outlined text-[32px]">liquor</span>
+                                            </div>
+                                            <span
+                                                class="px-space-md py-1 bg-[#e7f1f9] text-[#0e5b9e] font-label-md text-label-md rounded-full font-bold border border-[#0e5b9e]/20 shadow-sm">Refrescante</span>
+                                        </div>
+                                        <div class="mt-space-xs flex items-baseline justify-between gap-2">
+                                            <h3
+                                                class="font-headline-md text-2xl text-[#301401] font-black leading-tight">
+                                                Soda Italiana</h3>
+                                            <span
+                                                class="font-headline-xl text-2xl text-[#c84022] font-black whitespace-nowrap"
+                                                id="soda-price-display">R$ 4,50</span>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-[#59413c] leading-relaxed">
+                                            Xarope natural artesanal de frutas tropicais (Maçã Verde, Morango ou
+                                            Maracujá) com água com gás e muito gelo.
+                                        </p>
+                                        <div class="flex flex-col gap-1.5 pt-space-xs">
+                                            <span
+                                                class="font-label-sm text-label-sm text-[#835500] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-[18px]">straighten</span>
+                                                Escolha o tamanho:
+                                            </span>
+                                            <div
+                                                class="grid grid-cols-2 gap-2 bg-[#ffeadf] p-1.5 rounded-full border border-[#feae2c]/30">
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-bold transition-all shadow-sm flex items-center justify-center gap-1 bg-[#c84022] text-white"
+                                                    id="btn-soda-200"
+                                                    onclick="selectDrinkSize('soda', 'Soda Italiana', '200ml', 4.50)"
+                                                    type="button">
+                                                    <span class="">200 ml</span>
+                                                </button>
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-[#835500] hover:bg-white/70"
+                                                    id="btn-soda-400"
+                                                    onclick="selectDrinkSize('soda', 'Soda Italiana', '400ml', 6.90)"
+                                                    type="button">
+                                                    <span class="">400 ml</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-lg mt-auto">
+                                        <button
+                                            class="w-full py-space-sm rounded-full bg-[#c84022] text-white font-label-md text-label-md hover:bg-[#a93119] transition-all flex items-center justify-center gap-2 shadow-sm font-bold"
+                                            id="btn-add-soda" onclick="addDrinkToCart('soda')">
+                                            <span class="material-symbols-outlined text-[20px]">add</span>
+                                            <span id="soda-btn-text" class="">Adicionar 200ml (R$ 4,50)</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Bebida 4: Refrigerantes Gelados -->
+                                <div class="bg-white rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-[#ffdbc7] min-h-[360px] group"
+                                    id="card-bebida-refrigerante">
+                                    <div class="flex flex-col gap-space-sm">
+                                        <div class="flex items-center justify-between">
+                                            <div
+                                                class="w-16 h-16 rounded-2xl bg-[#c84022]/10 text-[#c84022] flex items-center justify-center shadow-inner">
+                                                <span class="material-symbols-outlined text-[32px]">sports_bar</span>
+                                            </div>
+                                            <span
+                                                class="px-space-md py-1 bg-[#ffe8d6] text-[#c84022] font-label-md text-label-md rounded-full font-bold border border-[#c84022]/20 shadow-sm">Trincando</span>
+                                        </div>
+                                        <div class="mt-space-xs flex items-baseline justify-between gap-2">
+                                            <h3
+                                                class="font-headline-md text-2xl text-[#301401] font-black leading-tight">
+                                                Refrigerantes</h3>
+                                            <span
+                                                class="font-headline-xl text-2xl text-[#c84022] font-black whitespace-nowrap"
+                                                id="refri-price-display">R$ 4,50</span>
+                                        </div>
+                                        <p class="font-body-md text-body-md text-[#59413c] leading-relaxed">
+                                            Coca-Cola original/zero ou Guaraná Antarctica bem gelados na temperatura
+                                            ideal servidos na lata ou copo.
+                                        </p>
+                                        <div class="flex flex-col gap-1.5 pt-space-xs">
+                                            <span
+                                                class="font-label-sm text-label-sm text-[#835500] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                                                <span class="material-symbols-outlined text-[18px]">straighten</span>
+                                                Escolha o tamanho:
+                                            </span>
+                                            <div
+                                                class="grid grid-cols-2 gap-2 bg-[#ffeadf] p-1.5 rounded-full border border-[#feae2c]/30">
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-bold transition-all shadow-sm flex items-center justify-center gap-1 bg-[#c84022] text-white"
+                                                    id="btn-refri-200"
+                                                    onclick="selectDrinkSize('refri', 'Refrigerante Gelado', '200ml', 4.50)"
+                                                    type="button">
+                                                    <span class="">200 ml</span>
+                                                </button>
+                                                <button
+                                                    class="py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-[#835500] hover:bg-white/70"
+                                                    id="btn-refri-400"
+                                                    onclick="selectDrinkSize('refri', 'Refrigerante Gelado', '400ml', 6.90)"
+                                                    type="button">
+                                                    <span class="">400 ml</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-space-lg mt-auto">
+                                        <button
+                                            class="w-full py-space-sm rounded-full bg-[#c84022] text-white font-label-md text-label-md hover:bg-[#a93119] transition-all flex items-center justify-center gap-2 shadow-sm font-bold"
+                                            id="btn-add-refri" onclick="addDrinkToCart('refri')">
+                                            <span class="material-symbols-outlined text-[20px]">add</span>
+                                            <span id="refri-btn-text" class="">Adicionar 200ml (R$ 4,50)</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- ================= 6. CARRINHO LATERAL / RESUMO DO PEDIDO (COL 4) ================= -->
+                    <aside class="lg:col-span-4 sticky top-24 w-full">
+                        <div
+                            class="bg-white border-2 border-[#feae2c] rounded-xl p-space-lg shadow-2xl flex flex-col gap-space-md relative overflow-hidden">
+                            <!-- Top Brand Header Ribbon (Terracota, Amarelo, Verde, Azul) -->
+                            <div
+                                class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#c84022] via-[#feae2c] via-[#1b633a] to-[#0e5b9e]">
+                            </div>
+                            <!-- Cart Header with Hibiscus Graphic -->
+                            <div class="flex items-center justify-between pb-space-sm border-b border-[#ffdbc7]">
+                                <div class="flex items-center gap-space-xs">
+                                    <span
+                                        class="material-symbols-outlined text-[#c84022] text-[26px]">shopping_bag</span>
+                                    <h3 class="font-headline-md text-headline-md text-[#301401] font-extrabold">Seu
+                                        Pedido Raízes</h3>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="text-lg">🌺</span>
+                                    <span
+                                        class="px-space-xs py-0.5 rounded-full bg-[#feae2c] text-[#301401] font-label-sm text-label-sm font-bold shadow-sm"
+                                        id="cart-counter-badge">
+                                        0 itens
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Empty State with tropical greeting -->
+                            <div class="py-space-xl flex flex-col items-center justify-center text-center gap-space-xs text-[#59413c]"
+                                id="cart-empty-state">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-[#ffeedb] flex items-center justify-center text-[#c84022] text-3xl shadow-inner mb-1">
+                                    🌺
+                                </div>
+                                <p class="font-label-lg text-label-lg font-bold text-[#301401]">Sua comanda ainda está
+                                    vazia</p>
+                                <p class="font-body-sm text-body-sm text-[#59413c]">Atendimento imediato • <a
+                                        href="https://wa.me/5571992139376" target="_blank" rel="noopener noreferrer"
+                                        class="font-bold hover:underline">(71) 99213-9376</a></p>
+                            </div>
+                            <!-- Items Container -->
+                            <div class="hidden flex flex-col gap-space-sm max-h-[300px] overflow-y-auto pr-1"
+                                id="cart-items-list">
+                                <!-- Dynamic items populated by script -->
+                            </div>
+
+                            <!-- Customer Name Input Block (Required for WhatsApp Order) -->
+                            <div class="hidden flex flex-col gap-1 pt-space-xs" id="cart-name-block">
+                                <label
+                                    class="font-label-md text-label-md text-[#301401] font-semibold flex items-center gap-1"
+                                    for="customer-name">
+                                    <span class="material-symbols-outlined text-[16px] text-[#c84022]">person</span> Seu
+                                    Nome: <span class="text-xs text-[#c84022] font-bold">*</span>
+                                </label>
+                                <input
+                                    class="w-full px-space-md py-space-xs bg-[#fff5ee] border border-[#ffdbc7] text-[#301401] rounded font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:border-[#c84022] transition-colors"
+                                    id="customer-name" placeholder="Como podemos te chamar no WhatsApp?" type="text"
+                                    required="">
+                            </div>
+
+                            <!-- Observation Field -->
+                            <div class="hidden flex flex-col gap-1 pt-space-xs" id="cart-obs-block">
+                                <label
+                                    class="font-label-md text-label-md text-[#301401] font-semibold flex items-center gap-1"
+                                    for="order-observations">
+                                    <span class="material-symbols-outlined text-[16px] text-[#c84022]">edit_note</span>
+                                    Observações do Pedido:
+                                </label>
+                                <input
+                                    class="w-full px-space-md py-space-xs bg-[#fff5ee] border border-[#ffdbc7] text-[#301401] rounded font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:border-[#c84022] transition-colors"
+                                    id="order-observations" placeholder="Ex: Ponto da carne, sem cebola, etc..."
+                                    type="text">
+                            </div>
+                            <!-- Calculation Summary with Rich Bahian Frame -->
+                            <div class="hidden flex flex-col gap-space-xs pt-space-sm bg-[#fff2e8] border border-[#feae2c] p-space-md rounded-lg"
+                                id="cart-summary-block">
+                                <div class="flex items-center justify-between font-body-sm text-body-sm text-[#59413c]">
+                                    <span class="">Subtotal:</span>
+                                    <span class="font-bold text-[#301401]" id="cart-subtotal">R$ 0,00</span>
+                                </div>
+                                <div class="flex items-center justify-between font-body-sm text-body-sm text-[#59413c]">
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[16px] text-[#1b633a]">moped</span>
+                                        Taxa de entrega:
+                                    </span>
+                                    <span class="text-[#1b633a] font-bold">A combinar via WhatsApp</span>
+                                </div>
+                                <div
+                                    class="flex items-center justify-between font-headline-md text-headline-md font-extrabold text-[#301401] pt-space-xs border-t border-[#feae2c]/50">
+                                    <span class="">Total Estimado:</span>
+                                    <span class="text-[#c84022] font-black" id="cart-total">R$ 0,00</span>
+                                </div>
+                            </div>
+                            <!-- WhatsApp Checkout Button -->
+                            <button
+                                class="w-full py-space-md rounded-full bg-surface-dim text-on-surface/40 font-label-lg text-label-lg transition-all flex items-center justify-center gap-2 cursor-not-allowed"
+                                disabled="" id="cart-checkout-btn"
+                                onclick="if (state.cart.length === 0) return; var orderId = '#RZ-' + Math.floor(1000 + Math.random() * 9000); document.getElementById('modal-order-id').textContent = orderId; var totalItems = state.cart.reduce(function(sum, i) { return sum + i.quantity; }, 0); var subtotal = state.cart.reduce(function(sum, i) { return sum + (i.price * i.quantity); }, 0); document.getElementById('modal-items-count').textContent = totalItems + (totalItems === 1 ? ' item' : ' itens'); document.getElementById('modal-total-display').textContent = 'R$ ' + subtotal.toFixed(2).replace('.', ','); document.getElementById('modal-items-summary').innerHTML = state.cart.map(function(i) { return '&lt;div class=\'flex items-center justify-between py-1 border-b border-[#feae2c]/20\'&gt;&lt;span&gt;&lt;strong&gt;' + i.quantity + 'x&lt;/strong&gt; ' + i.title + '&lt;/span&gt;&lt;span class=\'font-bold text-[#c84022]\'&gt;R$ ' + (i.price * i.quantity).toFixed(2).replace('.', ',') + '&lt;/span&gt;&lt;/div&gt;'; }).join(''); document.getElementById('modal-name-error').classList.add('hidden'); document.getElementById('order-modal').classList.remove('hidden'); setTimeout(function() { document.getElementById('modal-customer-name').focus(); }, 100);"><svg
+                                    class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.87 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.46zm-8.46 17.91h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.92-9.86 9.92zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z">
+                                    </path>
+                                </svg><span class="font-bold">Enviar Pedido para o WhatsApp</span></button>
+                            <div class="flex items-center justify-center gap-2 text-xs text-[#835500] font-medium">
+                                <span class="">🌺</span>
+                                <p class="">Atendimento imediato • <a href="https://wa.me/5571992139376" target="_blank"
+                                        rel="noopener noreferrer" class="font-bold hover:underline">(71) 99213-9376</a>
+                                </p>
+                                <span class="">🌺</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <!-- ================= 7. SEÇÃO SOBRE NÓS & AMBIENTE ================= -->
+                <section id="sobre-nos" class="mt-space-xl pt-space-xl scroll-mt-24">
+                    <div
+                        class="bg-gradient-to-br from-[#fff2e8] via-[#ffeadf] to-[#ffe3d3] border-4 border-[#feae2c] rounded-2xl p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center shadow-xl relative overflow-hidden">
+                        <!-- Decorative Background Hibiscus Stencil (Right) -->
+                        <div
+                            class="absolute -right-12 -bottom-12 w-64 h-64 text-[#c84022] opacity-15 pointer-events-none">
+                            <svg class="w-full h-full fill-current" viewBox="0 0 100 100">
+                                <path d="M50 40 C35 15 65 5 75 20 C85 35 75 50 50 40 Z"></path>
+                                <path
+                                    d="M50 50 C35 25 70 15 65 45 C80 35 95 65 70 70 C80 90 45 95 40 75 C20 90 5 60 35 55 C15 40 40 15 50 50 Z">
+                                </path>
+                                <circle cx="50" cy="52" r="8"></circle>
+                            </svg>
+                        </div>
+                        <div class="lg:col-span-5 relative">
+                            <div
+                                class="w-full h-80 rounded-xl overflow-hidden shadow-lg border-2 border-white relative">
+                                <img class="w-full h-full object-cover" alt="Ambiente acolhedor do restaurante Raízes"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-f5h6Ftf9ZB5vx8s3mwcXu5RxYZd1fijv6ui31I9N6d6Ii9LdR_jfuCniz4GBRcUNNwgzNSL8PnJTp6SqM3m8wgTGD5Ncc63FadmCRbzR2CsQKqAla6tTYaKnGqyhdymikWjH2QvaqhzLOTb3-HkOl4Qq9WAADbK_Xj9uRrS49HkjmHxRm7TcZlMlXkxRIaHWiS0jggnlazKzxoNktvzmhhbx0q7JbNg1_8ktx_hz9ug03AO-KQFCjw">
+                            </div>
+                            <div
+                                class="absolute -bottom-4 -right-4 bg-white border-2 border-[#feae2c] p-space-sm rounded-xl shadow-xl flex items-center gap-space-sm">
+                                <img alt="Selo Raízes" class="h-10 w-auto object-contain rounded"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlrD13KyFibt7JwmN_TFGPkemqD5B-hEH1yDdh_C6-uLk8vgycEHc2I6TJzwCjNdnM5wxz6uhrAX1bz0icKEOH9-h4IquUkpBmMFi-XGu1pPcr6Ug4COda7aO3CP8wXNOO31bYyPXFOUO_DAAr8NP_6pxxur-_05BxYoo31ccq8rrdvJ7szK3u05pxHxwPLe2JE8i4zBYN-CbXL-j0EjI_X2YxCsprIOu5L97Xh4DJ_qjY94vKv47aiQ6qT3VUCpUzSAk">
+                                <div class="flex flex-col"><span
+                                        class="font-label-md text-label-md font-extrabold text-[#301401] flex items-center gap-1">Culinária
+                                        Afetiva 🌺</span></div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 flex flex-col gap-space-sm relative z-10">
+                            <div
+                                class="inline-flex items-center gap-2 px-space-md py-1 bg-white rounded-full border border-[#c84022] text-[#c84022] w-fit shadow-sm">
+                                <span class="">🌺</span>
+                                <span class="font-label-sm text-label-sm uppercase tracking-widest font-black">Nossa
+                                    História • Salvador / BA</span>
+                                <span class="">☀️</span>
+                            </div>
+                            <h2 class="font-headline-xl text-headline-xl text-[#301401] font-black leading-tight">
+                                O Calor Humano e o Verdadeiro Tempero Baiano
+                            </h2>
+                            <p class="font-body-md text-body-md text-[#59413c] font-medium leading-relaxed">
+                                O <strong class="text-[#c84022]">Raízes – Sabores da Bahia</strong> nasceu do desejo de
+                                resgatar o sabor genuíno dos encontros de família no Rio Vermelho. Acreditamos que a
+                                comida é o abraço que acolhe a alma: desde a fumaça perfumada dos nossos espetinhos na
+                                brasa até o purê aveludado dos escondidinhos que derretem na boca.
+                            </p>
+                            <p class="font-body-md text-body-md text-[#59413c] font-medium leading-relaxed">
+                                Seja para saborear no nosso terraço acolhedor ou para receber embalado com afeto na sua
+                                casa via WhatsApp, nosso compromisso é oferecer ingredientes frescos, respeito às raízes
+                                e o sorriso acolhedor que só a Bahia tem.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer id="contato"
+        class="w-full bg-[#fff5ee] border-t-4 border-[#feae2c] text-[#301401] mt-space-xl relative scroll-mt-20">
+        <!-- Multi-color wave top bar -->
+        <div class="w-full h-2 bg-gradient-to-r from-[#c84022] via-[#feae2c] via-[#1b633a] to-[#0e5b9e]"></div>
+        <div class="w-full max-w-[1280px] mx-auto px-margin-desktop py-space-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+                <div class="flex flex-col gap-space-sm">
+                    <div
+                        class="flex items-center gap-space-sm mb-space-xs bg-white/70 p-2 rounded-xl border border-[#feae2c]/50 shadow-sm w-fit">
+                        <img alt="Raízes Sabores da Bahia Logotipo"
+                            class="h-16 w-auto object-contain rounded-lg drop-shadow-sm"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmIwXpk214ad0F-bt1S4-vLqUmI5onUINrSJscUhqYKUrXsSrzJmAq_HOKzbSO0MGrLf6R_xPpdBDd2kXa5o99lnGdt2W24gO-NiQ6yn9YWXQsW3cAfI6dxVLiyPPVPAF_K_0ztAbjIijhUB_pY0I2PZEIx4CfI0RahBVcxdzZnbnWcMhUN9N2l433AUL5gyOu4ipFdi4aXHC1jN4yfwo0xGeZul8S8hDen8No3dyetblMF3JytiD3zU8lBMH_VUdaHT4">
+                        <div class="flex flex-col pr-2"><span
+                                class="font-headline-md text-headline-md text-[#c84022] font-black tracking-tight leading-tight">Raízes</span><span
+                                class="font-label-sm text-label-sm text-[#835500] uppercase tracking-wider font-bold">Sabores
+                                da Bahia</span></div>
+                    </div>
+                    <p class="font-headline-sm text-headline-sm font-bold text-[#835500] italic mb-space-xs">“O sabor da
+                        nossa terra, em cada mordida” 🌺</p>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4
+                        class="font-headline-md text-headline-md text-[#c84022] mb-space-xs font-bold flex items-center gap-1.5">
+                        <span class="">☀️</span> Horário de Funcionamento
+                    </h4>
+                    <div class="flex items-start gap-space-xs">
+                        <span class="material-symbols-outlined text-[#835500] text-[20px] mt-0.5">schedule</span>
+                        <div class="font-body-sm text-body-sm text-[#59413c]">
+                            <p class=""><strong class="text-[#301401]">Sábado:</strong>&nbsp;8h00 às 12h00</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4
+                        class="font-headline-md text-headline-md text-[#c84022] mb-space-xs font-bold flex items-center gap-1.5">
+                        <span class="">🌴</span> Onde Encontrar
+                    </h4>
+                    <div class="flex items-start gap-space-xs mb-space-xs">
+                        <span class="material-symbols-outlined text-[#835500] text-[20px] mt-0.5">location_on</span>
+                        <p class="font-body-sm text-body-sm text-[#59413c]">Av. Luiz Tarquínio Pontes, 1275 -
+                            Pitangueiras, Lauro de Freitas / Salvador - BA</p>
+                    </div>
+                    <div class="flex items-center gap-space-xs"><span
+                            class="material-symbols-outlined text-[#1b633a] text-[20px]">call</span><a
+                            href="tel:+5571992139376"
+                            class="font-label-md text-label-md text-[#301401] font-bold hover:text-primary transition-colors">(71)
+                            99213-9376</a><a href="https://wa.me/5571992139376" target="_blank"
+                            rel="noopener noreferrer"
+                            class="ml-1 text-xs px-2 py-0.5 bg-[#1b633a]/10 text-[#1b633a] rounded-full font-bold hover:bg-[#1b633a] hover:text-white transition-colors">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                    <h4
+                        class="font-headline-md text-headline-md text-[#c84022] mb-space-xs font-bold flex items-center gap-1.5">
+                        <span class="">🌺</span> Conecte-se Conosco
+                    </h4><a href="https://instagram.com/raizes.anglo" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-space-xs mb-space-xs group"><span
+                            class="material-symbols-outlined text-[#c84022] text-[20px]">share</span><span
+                            class="font-label-md text-label-md text-[#301401] font-bold group-hover:text-primary transition-colors">@raizes.anglo</span></a>
+                    <p class="font-body-sm text-body-sm text-[#59413c] mb-space-sm">Acompanhe nossas novidades, temperos
+                        e receitas especiais no Instagram.</p>
+                    <div class="flex flex-wrap items-center gap-space-xs"><a href="https://instagram.com/raizes.anglo"
+                            target="_blank" rel="noopener noreferrer"
+                            class="px-space-md py-space-xs bg-gradient-to-r from-[#c84022] to-[#feae2c] text-white rounded-full font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm font-bold hover:opacity-90 transition-all"><span
+                                class="material-symbols-outlined text-[16px]">photo_camera</span> Seguir
+                            @raizes.anglo</a><a href="https://wa.me/5571992139376" target="_blank"
+                            rel="noopener noreferrer"
+                            class="px-space-md py-space-xs bg-[#1b633a] text-white rounded-full font-label-sm text-label-sm flex items-center gap-1.5 shadow-sm font-bold hover:bg-[#154f2e] transition-colors"><svg
+                                class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.87 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.46zm-8.46 17.91h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.92-9.86 9.92zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z">
+                                </path>
+                            </svg><span class="">WhatsApp</span></a></div>
+                </div>
+            </div>
+            <div
+                class="mt-space-xl pt-space-md border-t border-[#feae2c]/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-[#59413c]">
+                <p class="">© 2026 Raízes – Todos os direitos reservados.</p>
+                <p class="flex items-center gap-1.5 font-semibold text-[#c84022]">Feito com carinho e tradição baiana 🌺
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE INTERATIVIDADE COMPLETO (ESTADO DO CARRINHO, ID DO PEDIDO, NOME DO CLIENTE, ENTRADA DO WHATSAPP E FILTROS) -->
+    <script>
+        const state = {
+            cart: [],
+            currentCategory: 'all'
+        };
+
+        function addToCart(title, price) {
+            const existing = state.cart.find(item => item.title === title);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                state.cart.push({ title, price, quantity: 1 });
+            }
+            renderCart();
+        }
+
+        function changeQuantity(title, delta) {
+            const item = state.cart.find(item => item.title === title);
+            if (!item) return;
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                state.cart = state.cart.filter(i => i.title !== title);
+            }
+            renderCart();
+        }
+
+        function renderCart() {
+            const emptyState = document.getElementById('cart-empty-state');
+            const itemsList = document.getElementById('cart-items-list');
+            const nameBlock = document.getElementById('cart-name-block');
+            const obsBlock = document.getElementById('cart-obs-block');
+            const summaryBlock = document.getElementById('cart-summary-block');
+            const checkoutBtn = document.getElementById('cart-checkout-btn');
+            const badge = document.getElementById('cart-counter-badge');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const totalEl = document.getElementById('cart-total');
+
+            const totalItems = state.cart.reduce((sum, i) => sum + i.quantity, 0);
+            const subtotal = state.cart.reduce((sum, i) => sum + (i.price * i.quantity), 0);
+
+            if (badge) badge.textContent = `${totalItems} ${totalItems === 1 ? 'item' : 'itens'}`;
+
+            if (state.cart.length === 0) {
+                if (emptyState) emptyState.classList.remove('hidden');
+                if (itemsList) itemsList.classList.add('hidden');
+                if (nameBlock) nameBlock.classList.add('hidden');
+                if (obsBlock) obsBlock.classList.add('hidden');
+                if (summaryBlock) summaryBlock.classList.add('hidden');
+                if (checkoutBtn) {
+                    checkoutBtn.disabled = true;
+                    checkoutBtn.className = 'w-full py-space-md rounded-full bg-surface-dim text-on-surface/40 font-label-lg text-label-lg transition-all flex items-center justify-center gap-2 cursor-not-allowed';
+                }
+            } else {
+                if (emptyState) emptyState.classList.add('hidden');
+                if (itemsList) itemsList.classList.remove('hidden');
+                if (nameBlock) nameBlock.classList.remove('hidden');
+                if (obsBlock) obsBlock.classList.remove('hidden');
+                if (summaryBlock) summaryBlock.classList.remove('hidden');
+                if (checkoutBtn) {
+                    checkoutBtn.disabled = false;
+                    checkoutBtn.className = 'w-full py-space-md rounded-full bg-[#c84022] text-white font-label-lg text-label-lg hover:bg-[#a93119] transition-all flex items-center justify-center gap-2 shadow-md cursor-pointer font-bold';
+                }
+
+                if (itemsList) {
+                    itemsList.innerHTML = state.cart.map(item => `
+          <div class="flex items-center justify-between bg-surface-container-low p-space-xs rounded">
+            <div class="flex flex-col min-w-0 pr-2">
+              <span class="font-label-md text-label-md text-on-surface truncate font-semibold">${item.title}</span>
+              <span class="font-body-sm text-body-sm text-[#c84022] font-bold">R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</span>
+            </div>
+            <div class="flex items-center gap-2 bg-surface-container-lowest px-space-xs py-0.5 rounded-full shadow-sm">
+              <button onclick="changeQuantity('${item.title}', -1)" class="w-6 h-6 flex items-center justify-center rounded-full hover:bg-surface-container text-on-surface-variant font-bold text-xs" aria-label="Diminuir">
+                -
+              </button>
+              <span class="font-label-md text-label-md font-bold text-on-surface px-1">${item.quantity}</span>
+              <button onclick="changeQuantity('${item.title}', 1)" class="w-6 h-6 flex items-center justify-center rounded-full hover:bg-surface-container text-on-surface-variant font-bold text-xs" aria-label="Aumentar">
+                +
+              </button>
+            </div>
+          </div>
+        `).join('');
+                }
+
+                if (subtotalEl) subtotalEl.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+                if (totalEl) totalEl.textContent = `R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+            }
+        }
+
+        function generateOrderId() {
+            const timestamp = Date.now().toString().slice(-4);
+            const random = Math.floor(100 + Math.random() * 900);
+            return `RZ-${timestamp}${random}`;
+        }
+
+        function sendOrderViaWhatsApp() {
+            if (state.cart.length === 0) return;
+
+            const nameInput = document.getElementById('customer-name');
+            let customerName = nameInput ? nameInput.value.trim() : '';
+
+            if (!customerName) {
+                customerName = prompt("Por favor, informe seu nome para identificação do pedido:");
+                if (!customerName || !customerName.trim()) {
+                    alert("O nome é necessário para registrar seu pedido!");
+                    if (nameInput) nameInput.focus();
+                    return;
+                }
+                if (nameInput) nameInput.value = customerName;
+            }
+
+            const orderId = generateOrderId();
+            const subtotal = state.cart.reduce((sum, i) => sum + (i.price * i.quantity), 0);
+            const obsInput = document.getElementById('order-observations');
+            const observations = obsInput ? obsInput.value.trim() : '';
+
+            let message = `*NOVO PEDIDO - RAÍZES SABORES DA BAHIA*%0A`;
+            message += `*ID do Pedido:* #${orderId}%0A`;
+            message += `*Cliente:* ${encodeURIComponent(customerName)}%0A`;
+            message += `----------------------------------------%0A`;
+
+            state.cart.forEach(item => {
+                message += `• ${item.quantity}x ${encodeURIComponent(item.title)} - R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}%0A`;
+            });
+
+            message += `----------------------------------------%0A`;
+            message += `*Total dos Itens:* R$ ${subtotal.toFixed(2).replace('.', ',')}%0A`;
+            if (observations) {
+                message += `*Observações:* ${encodeURIComponent(observations)}%0A`;
+            }
+            message += `%0APor favor, informe o endereço de entrega ou retirada para confirmarmos o pedido!`;
+
+            const whatsappUrl = `https://wa.me/5571992139376?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function filterCategory(cat) {
+            state.currentCategory = cat;
+            const buttons = document.querySelectorAll('.category-filter-btn');
+            buttons.forEach(btn => {
+                const btnCat = btn.getAttribute('data-category-btn');
+                if (btnCat === cat) {
+                    btn.className = 'category-filter-btn px-space-lg py-space-xs rounded-full bg-[#c84022] text-white font-label-md text-label-md whitespace-nowrap shadow-md transition-all font-bold flex items-center gap-1.5';
+                } else {
+                    btn.className = 'category-filter-btn px-space-lg py-space-xs rounded-full bg-white border border-[#feae2c] text-[#835500] hover:bg-[#ffeadf] font-label-md text-label-md whitespace-nowrap transition-all font-semibold flex items-center gap-1.5 shadow-sm';
+                }
+            });
+
+            const sections = document.querySelectorAll('[data-category-section]');
+            sections.forEach(sec => {
+                const secCat = sec.getAttribute('data-category-section');
+                if (cat === 'all' || secCat === cat) {
+                    sec.classList.remove('hidden');
+                } else {
+                    sec.classList.add('hidden');
+                }
+            });
+        }
+
+        // Açaí selection state
+        var selectedAcai = { size: '200ml', price: 7.90 };
+        function selectAcaiSize(size, price) {
+            selectedAcai = { size: size, price: price };
+            var btn200 = document.getElementById('btn-acai-200');
+            var btn500 = document.getElementById('btn-acai-500');
+            var priceDisplay = document.getElementById('acai-price-display');
+            var btnText = document.getElementById('acai-btn-text');
+
+            if (priceDisplay) {
+                priceDisplay.textContent = 'R$ ' + price.toFixed(2).replace('.', ',');
+            }
+            if (btnText) {
+                btnText.textContent = 'Adicionar ' + size + ' (R$ ' + price.toFixed(2).replace('.', ',') + ')';
+            }
+
+            if (size === '200ml') {
+                if (btn200) btn200.className = 'py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-bold transition-all shadow-sm flex items-center justify-center gap-1 bg-[#c84022] text-white';
+                if (btn500) btn500.className = 'py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-[#835500] hover:bg-white/70';
+            } else {
+                if (btn500) btn500.className = 'py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-bold transition-all shadow-sm flex items-center justify-center gap-1 bg-[#c84022] text-white';
+                if (btn200) btn200.className = 'py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-[#835500] hover:bg-white/70';
+            }
+        }
+
+        function addCurrentAcaiToCart() {
+            addToCart('Açaí Especial Raízes (' + selectedAcai.size + ')', selectedAcai.price);
+        }
+
+        // Bebidas Selection State
+        var drinkSelectionState = {
+            coco: { name: 'Água de Coco', size: '200ml', price: 4.90, opt1: '200', opt2: '500' },
+            limonada: { name: 'Limonada Suíça', size: '200ml', price: 5.25, opt1: '200', opt2: '400' },
+            soda: { name: 'Soda Italiana', size: '200ml', price: 4.50, opt1: '200', opt2: '400' },
+            refri: { name: 'Refrigerante Gelado', size: '200ml', price: 4.50, opt1: '200', opt2: '400' }
+        };
+
+        function selectDrinkSize(key, name, size, price) {
+            var item = drinkSelectionState[key];
+            if (!item) return;
+            item.size = size;
+            item.price = price;
+            var priceDisplay = document.getElementById(key + '-price-display');
+            var btnText = document.getElementById(key + '-btn-text');
+
+            if (priceDisplay) {
+                priceDisplay.textContent = 'R$ ' + price.toFixed(2).replace('.', ',');
+            }
+            if (btnText) {
+                btnText.textContent = 'Adicionar ' + size + ' (R$ ' + price.toFixed(2).replace('.', ',') + ')';
+            }
+
+            var btn1 = document.getElementById('btn-' + key + '-' + item.opt1);
+            var btn2 = document.getElementById('btn-' + key + '-' + item.opt2);
+            var activeClass = 'py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-bold transition-all shadow-sm flex items-center justify-center gap-1 bg-[#c84022] text-white';
+            var inactiveClass = 'py-1.5 px-space-xs rounded-full font-label-sm text-label-sm font-semibold transition-all flex items-center justify-center gap-1 bg-transparent text-[#835500] hover:bg-white/70';
+
+            if (size.indexOf(item.opt1) !== -1) {
+                if (btn1) btn1.className = activeClass;
+                if (btn2) btn2.className = inactiveClass;
+            } else {
+                if (btn2) btn2.className = activeClass;
+                if (btn1) btn1.className = inactiveClass;
+            }
+        }
+
+        function addDrinkToCart(key) {
+            var item = drinkSelectionState[key];
+            if (!item) return;
+            addToCart(item.name + ' (' + item.size + ')', item.price);
+        }
+        <!-- SCRIPT COMPLETO DE FUNCIONAMENTO DA COMANDA E WHATSAPP -->
+
+
+        function confirmAndSendWhatsApp() {
+            const nameInput = document.getElementById('modal-customer-name');
+            const errorEl = document.getElementById('modal-name-error');
+            const customerName = nameInput ? nameInput.value.trim() : '';
+
+            if (!customerName) {
+                if (errorEl) errorEl.classList.remove('hidden');
+                if (nameInput) nameInput.focus();
+                return;
+            }
+
+            const orderId = document.getElementById('modal-order-id').textContent;
+            const obsInput = document.getElementById('modal-observations');
+            const observations = obsInput ? obsInput.value.trim() : '';
+            const subtotal = state.cart.reduce((sum, i) => sum + (i.price * i.quantity), 0);
+
+            let msg = `🌺 *NOVO PEDIDO - RAÍZES* 🌺\n`;
+            msg += `----------------------------------------\n`;
+            msg += `*ID do Pedido:* ${orderId}\n`;
+            msg += `*Cliente:* ${customerName}\n`;
+            msg += `----------------------------------------\n`;
+            msg += `*Itens do Pedido:*\n`;
+
+            state.cart.forEach(item => {
+                const itemTotal = (item.price * item.quantity).toFixed(2).replace('.', ',');
+                msg += `• ${item.quantity}x ${item.title} - R$ ${itemTotal}\n`;
+            });
+
+            msg += `----------------------------------------\n`;
+            msg += `*Subtotal:* R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+            msg += `*Total Estimado:* R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+
+            if (observations) {
+                msg += `----------------------------------------\n`;
+                msg += `*Observações:* ${observations}\n`;
+            }
+            msg += `----------------------------------------\n`;
+            msg += `Aguardando confirmação! Obrigado!`;
+
+            const whatsappNumber = '5571992139376';
+            const encodedMsg = encodeURIComponent(msg);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMsg}`;
+
+            // Redireciona para a conversa do WhatsApp
+            try {
+                const win = window.open(whatsappUrl, '_blank');
+                if (!win || win.closed || typeof win.closed === 'undefined') {
+                    window.location.href = whatsappUrl;
+                }
+            } catch (e) {
+                window.location.href = whatsappUrl;
+            }
+
+            // Fecha o modal e limpa a comanda após envio
+            closeOrderModal();
+            state.cart = [];
+            renderCart();
+            if (nameInput) nameInput.value = '';
+            if (obsInput) obsInput.value = '';
+        }
+        function handleBackdropClick(event) {
+            if (event.target.id === 'order-modal') {
+                closeOrderModal();
+            }
+        }
+        // Fechar ao pressionar a tecla ESC
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' || event.key === 'Esc') {
+                const modal = document.getElementById('order-modal');
+                if (modal && !modal.classList.contains('hidden')) {
+                    closeOrderModal();
+                }
+            }
+        });
+        // Função de fechar modal compatível com o pedido do usuário
+        function closeOrderModal() {
+            const modal = document.getElementById('order-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+
+
+    <div id="order-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 hidden">
+        <div
+            class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl border-2 border-[#feae2c] flex flex-col relative transform transition-all">
+            <div class="h-2 w-full bg-gradient-to-r from-[#c84022] via-[#feae2c] via-[#1b633a] to-[#0e5b9e]"></div>
+            <div class="p-space-lg flex items-center justify-between border-b border-[#ffdbc7] bg-[#fff5ee]">
+                <div class="flex items-center gap-2"><span class="text-2xl">🌺</span>
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-[#301401] font-extrabold">Finalizar Pedido
+                            Raízes</h3>
+                        <p class="font-label-sm text-label-sm text-[#835500] font-bold">Pedido <span id="modal-order-id"
+                                class="text-[#c84022]">#RZ-0000</span></p>
+                    </div>
+                </div><button onclick="closeOrderModal()"
+                    class="w-8 h-8 rounded-full bg-[#ffeadf] text-[#59413c] hover:bg-[#c84022] hover:text-white transition-all flex items-center justify-center font-bold text-lg"><span
+                        class="material-symbols-outlined text-[20px]">close</span></button>
+            </div>
+            <div class="p-space-lg flex flex-col gap-space-md max-h-[70vh] overflow-y-auto">
+                <div class="bg-[#fff2e8] border border-[#feae2c]/60 p-space-sm rounded-xl">
+                    <div class="flex items-center justify-between mb-2"><span
+                            class="font-label-sm text-label-sm uppercase font-bold text-[#835500] flex items-center gap-1"><span
+                                class="material-symbols-outlined text-[16px]">receipt_long</span> Resumo dos Itens
+                            (<span id="modal-items-count" class="">0</span>)</span><span id="modal-total-display"
+                            class="font-headline-md text-[#c84022] font-black">R$ 0,00</span></div>
+                    <div id="modal-items-summary"
+                        class="flex flex-col gap-1 max-h-36 overflow-y-auto pr-1 text-body-sm text-[#59413c]"></div>
+                </div>
+                <div class="flex flex-col gap-1"><label for="modal-customer-name"
+                        class="font-label-md text-label-md text-[#301401] font-bold flex items-center gap-1"><span
+                            class="material-symbols-outlined text-[#c84022] text-[18px]">person</span> Seu Nome Completo
+                        <span class="text-[#c84022]">*</span></label><input type="text" id="modal-customer-name"
+                        placeholder="Como podemos te chamar no WhatsApp?"
+                        class="w-full px-space-md py-2.5 bg-[#fff5ee] border border-[#ffdbc7] text-[#301401] rounded-lg font-body-md focus:outline-none focus:border-[#c84022] transition-colors"><span
+                        id="modal-name-error"
+                        class="font-label-sm text-xs text-[#ba1a1a] font-bold hidden flex items-center gap-1"><span
+                            class="material-symbols-outlined text-[14px]">error</span> Por favor, informe seu nome para
+                        que possamos te identificar.</span></div>
+                <div class="flex flex-col gap-1"><label for="modal-observations"
+                        class="font-label-md text-label-md text-[#301401] font-semibold flex items-center gap-1"><span
+                            class="material-symbols-outlined text-[#c84022] text-[18px]">edit_note</span> Observações /
+                        Retirada ou Entrega (opcional):</label><textarea id="modal-observations" rows="2"
+                        placeholder="Ex: Bem passado, sem cebola, endereço de entrega ou retirada no balcão..."
+                        class="w-full px-space-md py-2 bg-[#fff5ee] border border-[#ffdbc7] text-[#301401] rounded-lg font-body-sm focus:outline-none focus:border-[#c84022] transition-colors resize-none"></textarea>
+                </div>
+                <div
+                    class="bg-[#e8f5ed] border border-[#1b633a]/30 p-2.5 rounded-lg flex items-center gap-2 text-xs text-[#1b633a] font-medium">
+                    <span class="material-symbols-outlined text-[20px] shrink-0">verified</span><span class="">Ao
+                        confirmar, abriremos sua conversa com o atendente Raízes já com o pedido pronto!</span>
+                </div>
+            </div>
+            <div class="p-space-md bg-[#fff5ee] border-t border-[#ffdbc7] flex items-center justify-end gap-2"><button
+                    type="button" onclick="closeOrderModal()"
+                    class="px-space-md py-2 rounded-full border border-[#835500]/30 text-[#835500] font-label-md text-label-md hover:bg-white transition-all font-semibold">Voltar
+                    ao Cardápio</button><button type="button" onclick="confirmAndSendWhatsApp()"
+                    class="px-space-lg py-2.5 rounded-full bg-[#1b633a] hover:bg-[#154f2e] text-white font-label-md text-label-md transition-all flex items-center gap-2 shadow-md font-bold"><svg
+                        class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.87 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.46zm-8.46 17.91h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.92-9.86 9.92zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z">
+                        </path>
+                    </svg><span class="">Confirmar &amp; Enviar no WhatsApp</span></button></div>
+        </div>
+    </div>
+
+    <div id="order-modal"
+        class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div
+            class="bg-white rounded-2xl max-w-lg w-full p-space-lg shadow-2xl border-2 border-[#feae2c] flex flex-col gap-space-md relative max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between border-b border-[#feae2c]/40 pb-2">
+                <div class="flex items-center gap-2"><span
+                        class="material-symbols-outlined text-[#c84022] text-[24px]">receipt_long</span>
+                    <h3 class="font-headline-md text-xl text-[#301401] font-bold">Confirmar Pedido</h3><span
+                        id="modal-order-id"
+                        class="text-xs font-bold text-[#c84022] bg-[#ffe8d6] px-2 py-0.5 rounded-full">#RZ-0000</span>
+                </div><button type="button"
+                    onclick="document.getElementById('order-modal').classList.add('hidden'); document.getElementById('modal-name-error').classList.add('hidden');"
+                    class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-[#ffeadf] text-[#59413c] transition-colors"><span
+                        class="material-symbols-outlined text-[20px]">close</span></button>
+            </div>
+            <div class="flex flex-col gap-1">
+                <div
+                    class="flex items-center justify-between text-xs font-bold text-[#835500] uppercase tracking-wider">
+                    <span class="">Resumo dos Itens</span><span id="modal-items-count" class="">0 itens</span>
+                </div>
+                <div id="modal-items-summary"
+                    class="flex flex-col text-sm text-[#301401] max-h-36 overflow-y-auto py-1"></div>
+                <div
+                    class="flex items-center justify-between pt-2 border-t border-[#feae2c]/40 font-bold text-[#301401]">
+                    <span class="">Total:</span><span id="modal-total-display" class="text-lg text-[#c84022]">R$
+                        0,00</span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-1"><label for="modal-customer-name"
+                    class="font-label-md text-label-md text-[#301401] font-semibold flex items-center gap-1"><span
+                        class="material-symbols-outlined text-[16px] text-[#c84022]">person</span> Seu Nome: <span
+                        class="text-xs text-[#c84022] font-bold">*</span></label><input type="text"
+                    id="modal-customer-name" placeholder="Como devemos te chamar?"
+                    class="w-full px-space-md py-space-xs bg-[#fff5ee] border border-[#ffdbc7] text-[#301401] rounded font-body-sm text-body-sm focus:outline-none focus:border-[#c84022]">
+                <p id="modal-name-error" class="hidden text-xs text-[#ba1a1a] font-bold mt-0.5">Por favor, informe seu
+                    nome para prosseguir com o pedido.</p>
+            </div>
+            <div class="flex flex-col gap-1"><label for="modal-observations"
+                    class="font-label-md text-label-md text-[#301401] font-semibold flex items-center gap-1"><span
+                        class="material-symbols-outlined text-[16px] text-[#c84022]">edit_note</span>
+                    Observações:</label><input type="text" id="modal-observations"
+                    placeholder="Ex: ponto da carne, sem cebola, etc."
+                    class="w-full px-space-md py-space-xs bg-[#fff5ee] border border-[#ffdbc7] text-[#301401] rounded font-body-sm text-body-sm focus:outline-none focus:border-[#c84022]">
+            </div>
+            <div class="flex flex-col sm:flex-row items-center justify-end gap-2 pt-2 border-t border-[#feae2c]/40">
+                <button type="button"
+                    onclick="document.getElementById('order-modal').classList.add('hidden'); document.getElementById('modal-name-error').classList.add('hidden');"
+                    class="w-full sm:w-auto px-space-md py-space-xs rounded-full border border-[#feae2c] text-[#835500] font-label-md hover:bg-[#ffeadf] transition-all font-semibold">Voltar
+                    ao Cardápio</button><button type="button" id="modal-confirm-btn"
+                    onclick="var name = document.getElementById('modal-customer-name').value.trim(); if (!name) { document.getElementById('modal-name-error').classList.remove('hidden'); document.getElementById('modal-customer-name').focus(); return; } var orderId = document.getElementById('modal-order-id').textContent; var obs = document.getElementById('modal-observations').value.trim(); var subtotal = state.cart.reduce(function(sum, i) { return sum + (i.price * i.quantity); }, 0); var msg = '🌺 *NOVO PEDIDO - RAÍZES SABORES DA BAHIA* 🌺\n----------------------------------------\n*ID do Pedido:* ' + orderId + '\n*Cliente:* ' + name + '\n----------------------------------------\n*Itens do Pedido:*\n'; state.cart.forEach(function(i) { msg += '• ' + i.quantity + 'x ' + i.title + ' - R$ ' + (i.price * i.quantity).toFixed(2).replace('.', ',') + '\n'; }); msg += '----------------------------------------\n*Total:* R$ ' + subtotal.toFixed(2).replace('.', ',') + '\n'; if (obs) { msg += '*Observações:* ' + obs + '\n'; } msg += '----------------------------------------\nO sabor da nossa terra em cada mordida! 🌺'; window.open('https://api.whatsapp.com/send?phone=5571992139376&amp;text=' + encodeURIComponent(msg), '_blank'); document.getElementById('order-modal').classList.add('hidden');"
+                    class="w-full sm:w-auto px-space-lg py-space-xs rounded-full bg-[#1b633a] hover:bg-[#154f2e] text-white font-label-md transition-all font-bold flex items-center justify-center gap-1.5 shadow-md"><svg
+                        class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M20.52 3.48A11.93 11.93 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.19-1.62a11.9 11.9 0 0 0 5.87 1.53h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.46zm-8.46 17.91h-.01c-1.8 0-3.56-.48-5.1-1.39l-.37-.22-3.79.99 1.01-3.69-.24-.38a9.92 9.92 0 0 1-1.52-5.23c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.49-4.46 9.92-9.86 9.92zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.24-.59-.49-.51-.68-.52h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z">
+                        </path>
+                    </svg> <span class="">Confirmar e Abrir WhatsApp</span></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
